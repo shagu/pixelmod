@@ -8,6 +8,6 @@ fi
 cd -
 
 # Remove ugly default apps
-cd $ANDROID_BUILD_TOP/build/target/product
+cd $ANDROID_BUILD_TOP/build
 patch -N -p 1 < $ANDROID_BUILD_TOP/vendor/pixelmod/redfin/patches/remove-apps.patch
 cd -
