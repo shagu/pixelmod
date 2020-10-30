@@ -59,9 +59,6 @@ The latest version of the binaries can be found on the [Driver Binaries](https:/
 
 ### Flash
 
-You may need to flash the latest Stock ROM first, in order to take care of partitioning if another ROM was in use before.
-[Stock ROM Download Page](https://developers.google.com/android/images) ([Direct Download](https://dl.google.com/dl/android/aosp/redfin-rd1a.200810.020-factory-c3ea1715.zip))
-
 To enable OEM unlocking on the device:
   - In Settings, tap About phone, then tap Build number seven times.
   - When you see the message You are a developer, tap the back button.
@@ -75,3 +72,8 @@ Flash all images:
 
     export ANDROID_PRODUCT_OUT=/home/lxc/aosp/rootfs/home/ubuntu/aosp/out/target/product/redfin
     fastboot flashall -w
+
+### Troubleshooting
+You may need to flash the latest Stock ROM first, in order to take care of partitioning if another ROM was in use before.
+[Stock ROM Download Page](https://developers.google.com/android/images) ([Direct Download](https://dl.google.com/dl/android/aosp/redfin-rd1a.200810.020-factory-c3ea1715.zip))
+
