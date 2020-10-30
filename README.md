@@ -77,3 +77,26 @@ Flash all images:
 You may need to flash the latest Stock ROM first, in order to take care of partitioning if another ROM was in use before.
 [Stock ROM Download Page](https://developers.google.com/android/images) ([Direct Download](https://dl.google.com/dl/android/aosp/redfin-rd1a.200810.020-factory-c3ea1715.zip))
 
+### Known Issues
+#### Telephony (No Sound)
+
+Calls remain silent in AOSP due to crashing vendor apps (com.qualcomm.qti.telephonyservice):
+
+    10-30 21:37:46.923  7724  7724 D AndroidRuntime: Shutting down VM
+    10-30 21:37:46.924  7724  7724 E AndroidRuntime: FATAL EXCEPTION: main
+    10-30 21:37:46.924  7724  7724 E AndroidRuntime: Process: com.qualcomm.qti.telephonyservice, PID: 7724
+    10-30 21:37:46.924  7724  7724 E AndroidRuntime: java.lang.NoClassDefFoundError: Failed resolution of: Lcom/qualcomm/qcrilhook/QcRilHook;
+    10-30 21:37:46.924  7724  7724 E AndroidRuntime: 	at com.qualcomm.qti.telephonyservice.QtiTelephonyService.onCreate(QtiTelephonyService.java:62)
+    10-30 21:37:46.924  7724  7724 E AndroidRuntime: 	at android.app.ActivityThread.handleCreateService(ActivityThread.java:4192)
+    10-30 21:37:46.924  7724  7724 E AndroidRuntime: 	at android.app.ActivityThread.access$1500(ActivityThread.java:237)
+    10-30 21:37:46.924  7724  7724 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1932)
+    10-30 21:37:46.924  7724  7724 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+    10-30 21:37:46.924  7724  7724 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:223)
+    10-30 21:37:46.924  7724  7724 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7656)
+    10-30 21:37:46.924  7724  7724 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+    10-30 21:37:46.924  7724  7724 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:592)
+    10-30 21:37:46.924  7724  7724 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:947)
+    10-30 21:37:46.924  7724  7724 E AndroidRuntime: Caused by: java.lang.ClassNotFoundException: com.qualcomm.qcrilhook.QcRilHook
+    10-30 21:37:46.924  7724  7724 E AndroidRuntime: 	... 10 more
+    10-30 21:37:46.925  1518  2774 W ActivityManager: Process com.qualcomm.qti.telephonyservice has crashed too many times: killing!
+
