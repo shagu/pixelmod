@@ -3,5 +3,4 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_PACKAGES += \
     fdroid \
-    fennec \
-    bliss \
+
