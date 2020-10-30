@@ -1,0 +1,34 @@
+diff --git a/target/product/handheld_product.mk b/target/product/handheld_product.mk
+index 2199c570a..b9fa7b514 100644
+--- a/target/product/handheld_product.mk
++++ b/target/product/handheld_product.mk
+@@ -22,9 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/media_product.mk)
+ 
+ # /product packages
+ PRODUCT_PACKAGES += \
+-    Browser2 \
+     Calendar \
+-    Camera2 \
+     Contacts \
+     DeskClock \
+     Gallery2 \
+@@ -32,7 +30,6 @@ PRODUCT_PACKAGES += \
+     Music \
+     OneTimeInitializer \
+     preinstalled-packages-platform-handheld-product.xml \
+-    QuickSearchBox \
+     SettingsIntelligence \
+     frameworks-base-overlays
+ 
+diff --git a/target/product/handheld_system_ext.mk b/target/product/handheld_system_ext.mk
+index d935fbfdd..811c4f54d 100644
+--- a/target/product/handheld_system_ext.mk
++++ b/target/product/handheld_system_ext.mk
+@@ -22,7 +22,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/media_system_ext.mk)
+ 
+ # /system_ext packages
+ PRODUCT_PACKAGES += \
+-    Launcher3QuickStep \
+     Provision \
+     Settings \
+     StorageManager \
