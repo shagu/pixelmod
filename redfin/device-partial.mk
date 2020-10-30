@@ -1,6 +1,5 @@
 PRODUCT_SOONG_NAMESPACES += \
-    vendor/pixelmod/redfin/prebuilts \
+    vendor/pixelmod/redfin/prebuilts
 
 PRODUCT_PACKAGES += \
-    fdroid \
-
+    fdroid
