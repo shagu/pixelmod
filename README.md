@@ -1,6 +1,6 @@
 # pixelmod
 
-Pixelmod is a small AOSP modification that excludes some of the default apps and includes some other prebuilts apps like F-Droid.
+Pixelmod is a small AOSP modification for the Pixel 5 (redfin) devices, that excludes some of the default apps and includes some other prebuilts apps like F-Droid.
 It's not an official ROM or anything, it's just my personal modification to make the build easier for me.
 
 ## Build AOSP (pixelmod)
