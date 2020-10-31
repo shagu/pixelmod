@@ -3,6 +3,13 @@
 Pixelmod is a small AOSP modification for the Pixel 5 (redfin) devices, that excludes some of the default apps and includes some other prebuilts apps like F-Droid.
 It's not an official ROM or anything, it's just my personal modification to make the build easier for me.
 
+## Modifications
+
+  - Remove Browser2 (WebViewShell)
+  - Remove Camera2
+  - Remove QuickSearchBox
+  - Add F-Droid Prebuilt APK
+
 ## Build AOSP (pixelmod)
 
 ### Setup LXC Build Container (Ubuntu 18.04)
