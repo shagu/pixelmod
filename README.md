@@ -58,8 +58,8 @@ At the time of writing, this is `RQ1A.201205.011` for EU according to [this post
 ### Configure Environment
 
     source build/envsetup.sh
-    vendor/pixelmod/redfin/enable.sh
     lunch aosp_redfin-userdebug
+    vendor/pixelmod/redfin/enable.sh
 
 ### Build
 
