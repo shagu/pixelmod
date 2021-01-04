@@ -38,18 +38,18 @@ It's not an official ROM or anything, it's just my personal modification to make
 Check google's build numbers to identify the best tag for pixel 5: [Codenames, Tags, and Build Numbers](https://source.android.com/setup/start/build-numbers)
 
     mkdir aosp; cd aosp
-    repo init -u https://android.googlesource.com/platform/manifest -b android-11.0.0_r14
+    repo init -u https://android.googlesource.com/platform/manifest -b android-11.0.0_r22
     repo sync -d -q -c -j8
 
 ### Get the Binaries
 
 The latest version of the binaries can be found on the [Driver Binaries](https://developers.google.com/android/drivers) page.
-At the time of writing, this is `RD1A.201105.003.B1` for EU according to [this post](https://support.google.com/pixelphone/thread/80591482?hl=en).
+At the time of writing, this is `RQ1A.201205.011` for EU according to [this post](https://support.google.com/pixelphone/thread/87385737?hl=en).
 
-    curl https://dl.google.com/dl/android/aosp/google_devices-redfin-rd1a.201105.003.b1-5dbe21dd.tgz | tar xvz
+    curl https://dl.google.com/dl/android/aosp/google_devices-redfin-rq1a.201205.011-66234c78.tgz | tar xvz
     ./extract-google_devices-redfin.sh
 
-    curl https://dl.google.com/dl/android/aosp/qcom-redfin-rd1a.201105.003.b1-675b4528.tgz | tar xvz
+    curl https://dl.google.com/dl/android/aosp/qcom-redfin-rq1a.201205.011-89247957.tgz | tar xvz
     ./extract-qcom-redfin.sh
 
     git clone https://github.com/shagu/pixelmod/ vendor/pixelmod
