@@ -17,7 +17,7 @@ It's a personal project to make AOSP usable for my needs and to make the compila
 
 ## Install
 
-You can always obtain the latest pre-built ROM at the [Release Page](https://github.com/shagu/pixelmod/releases/)
+You can always obtain the latest pre-built ROM at the [Release Page](https://github.com/shagu/pixelmod/releases/).
 
 ### Unlock Phone
 
@@ -33,6 +33,10 @@ Turn off the phone, press and hold Volume Down, then press and hold Power.
 ### Install
 
     fastboot update aosp_redfin-img-eng.bob.zip
+
+## Troubleshooting
+You may need to flash the latest Stock ROM first, in order to take care of partitioning if another ROM was in use before.
+[Stock ROM Download Page](https://developers.google.com/android/images) ([Direct Download](https://dl.google.com/dl/android/aosp/redfin-rd1a.200810.020-factory-c3ea1715.zip))
 
 ## Compile pixelmod (AOSP)
 
@@ -94,7 +98,3 @@ Flash all images:
 
     export ANDROID_PRODUCT_OUT=/home/lxc/aosp/rootfs/home/ubuntu/aosp/out/target/product/redfin
     fastboot flashall -w
-
-### Troubleshooting
-You may need to flash the latest Stock ROM first, in order to take care of partitioning if another ROM was in use before.
-[Stock ROM Download Page](https://developers.google.com/android/images) ([Direct Download](https://dl.google.com/dl/android/aosp/redfin-rd1a.200810.020-factory-c3ea1715.zip))
