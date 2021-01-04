@@ -1,7 +1,10 @@
-# pixelmod
+![logo](logo.png)
 
-Pixelmod is a small AOSP modification for the Pixel 5 (redfin) devices, that excludes some of the default apps and includes some other prebuilts apps like F-Droid.
-It's not an official ROM or anything, it's just my personal modification to make the build easier for me.
+Pixelmod is a custom ROM for the [Pixel 5 (redfin)](https://store.google.com/product/pixel_5) devices, based on [AOSP (Android Open Source Project)](https://source.android.com/) with small modification to make it usable.
+By this, it excludes some of the default apps and includes some other prebuilts apps like [F-Droid](https://f-droid.org/).
+It's a personal project to make AOSP usable for my needs and to make the compilation of AOSP with custom changes easier.
+
+**Use at your own risk.**
 
 ## Modifications
 
@@ -9,8 +12,29 @@ It's not an official ROM or anything, it's just my personal modification to make
   - Remove Camera2
   - Remove QuickSearchBox
   - Add F-Droid Prebuilt APK
+  - Remove Quick Search from Home Screen
+  - Fix broken QCOM vendor binaries
 
-## Build AOSP (pixelmod)
+## Install
+
+You can always obtain the latest pre-built ROM at the [Release Page](https://github.com/shagu/pixelmod/releases/)
+
+### Unlock Phone
+
+To enable OEM unlocking on the device:
+  - In Settings, tap About phone, then tap Build number seven times.
+  - When you see the message You are a developer, tap the back button.
+  - Tap Developer options and enable OEM unlocking and USB debugging.
+
+Turn off the phone, press and hold Volume Down, then press and hold Power.
+
+    fastboot flashing unlock
+
+### Install
+
+    fastboot update aosp_redfin-img-eng.bob.zip
+
+## Compile pixelmod (AOSP)
 
 ### Setup LXC Build Container (Ubuntu 18.04)
 
@@ -65,25 +89,11 @@ At the time of writing, this is `RQ1A.201205.011` for EU according to [this post
 
     m dist
 
-### Flash
-
-To enable OEM unlocking on the device:
-  - In Settings, tap About phone, then tap Build number seven times.
-  - When you see the message You are a developer, tap the back button.
-  - Tap Developer options and enable OEM unlocking and USB debugging.
-
-Turn off the phone, press and hold Volume Down, then press and hold Power.
-
-    fastboot flashing unlock
-
+### Flash via `flashall`
 Flash all images:
 
     export ANDROID_PRODUCT_OUT=/home/lxc/aosp/rootfs/home/ubuntu/aosp/out/target/product/redfin
     fastboot flashall -w
-
-### Update/Flash
-
-    fastboot update aosp_redfin-img-eng.bob.zip
 
 ### Troubleshooting
 You may need to flash the latest Stock ROM first, in order to take care of partitioning if another ROM was in use before.
