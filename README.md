@@ -13,7 +13,6 @@ It's a personal project to make AOSP usable for my needs and to make the compila
   - Remove QuickSearchBox
   - Add F-Droid Prebuilt APK
   - Remove Quick Search from Home Screen
-  - Fix broken QCOM vendor binaries
 
 ## Install
 

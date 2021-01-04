@@ -16,8 +16,3 @@ cd -
 cd $ANDROID_BUILD_TOP/packages/apps/Launcher3
 patch -N -p 1 < $ANDROID_BUILD_TOP/vendor/pixelmod/redfin/patches/remove-launcher-quicksearch.patch
 cd -
-
-# Fix QtiTelephonyService crashes
-cd $ANDROID_BUILD_TOP/vendor/qcom
-patch -N -p 1 < $ANDROID_BUILD_TOP/vendor/pixelmod/redfin/patches/fix-qcom-telephony-crash.patch
-cd -
